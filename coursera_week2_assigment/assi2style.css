@@ -1,0 +1,61 @@
+
+*{
+	box-sizing: border-box;
+}
+
+h2{
+	text-align: center;
+	margin:50px 0 100px 0;
+}
+
+#innerbox1{
+	background-color: pink;
+}
+
+#innerbox2{
+	color: white;
+	background-color: red;	
+}
+
+#innerbox3{
+	background-color: yellow;
+}
+
+p{
+	background-color: gray;
+ 	border: 3px solid black;
+ 	padding: 0 10px 10px 10px;
+ 	float: left;
+ 	position: relative;
+}
+
+span{
+	border: 1px solid black;
+	width: 140px;
+ 	text-align: center;
+ 	font-weight: bold;
+ 	padding: 5px;
+ 	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+
+@media (min-width: 992px){
+	p{
+		width: 30%;
+		margin: 1.5%;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	p{
+		width: 45%;
+		margin: 2.5%;
+	}
+	div p:nth-child(3){
+		width: 95%;
+	}
+
+}
