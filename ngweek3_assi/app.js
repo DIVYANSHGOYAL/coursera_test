@@ -14,9 +14,8 @@
       scope: {
         list: "=items",
         remove: "&onRemove",
-      },
+      }
     };
-
     return ddo;
   }
 

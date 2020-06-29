@@ -24,12 +24,17 @@
 
       <div class="form-group narrow-button">
         <button class="btn btn-primary" ng-click="menu.searchItems()">
-          Narrow It Down For Me!
+          Narrow It Down For Me! 
         </button>
+        <!-- <li ng-repeat="item in menu.found">
+            {{ item.name }}  {{ item.short_name }}   {{item.description}}
+        </li>
+ -->
+        <found-items items="menu" on-remove="menu.removeItem(index)">
+        </found-items>
       </div>
 
-      <found-items items="menu.found" on-remove="menu.removeItem(index)">
-      </found-items>
+      
 
       <div class="error" ng-if="menu.error">
         Nothing found
