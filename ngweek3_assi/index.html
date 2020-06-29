@@ -26,10 +26,6 @@
         <button class="btn btn-primary" ng-click="menu.searchItems()">
           Narrow It Down For Me! 
         </button>
-        <!-- <li ng-repeat="item in menu.found">
-            {{ item.name }}  {{ item.short_name }}   {{item.description}}
-        </li>
- -->
         <found-items items="menu" on-remove="menu.removeItem(index)">
         </found-items>
       </div>
