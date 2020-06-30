@@ -27,14 +27,12 @@
 
     menu.found = function () {
       var promise = MenuSearchService.getMatchedMenuItems();
-      console.log(promise);
       promise.then(function (result) {
         for (var i = result.data.menu_items.length - 1; i >= 0; i--) {
           if(result.data.menu_items[i].description.toLowerCase().indexOf(menu.searchTerm.toLowerCase()) !== -1){
             menu.foundItems.push(result.data.menu_items[i]);
           }
         }
-        console.log(menu.foundItems);
       });
     };
 
