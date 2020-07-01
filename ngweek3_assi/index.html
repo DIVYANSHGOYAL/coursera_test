@@ -18,6 +18,12 @@
     </div>
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="menu.found();">Narrow It Down For Me!</button>
+      <ol>
+        <li ng-repeat="item in menu.found">
+          {{ item.name }} , {{ item.short_name }}  , {{item.description}}
+          <button ng-click="menu.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+      </ol>
       <found-items found-items="menu" on-remove="menu.removeItem(index)"></found-items>
     </div>
 
