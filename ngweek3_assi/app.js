@@ -1,4 +1,7 @@
-var app = angular.module('NarrowItDownApp', []);
+(function() {
+  'use strict'
+
+  var app = angular.module('NarrowItDownApp', []);
 
 app.controller('NarrowItDownController', ['$scope', 'MenuSearchService', function($scope, MenuSearchService) {
     $scope.searchTerm = '';
@@ -58,3 +61,7 @@ app.directive('foundItems', function() {
     }
     return ddo;
 });
+
+  
+})();
+
