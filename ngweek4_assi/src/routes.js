@@ -44,6 +44,10 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
         var promise = ShoppingListService.getMenuForCategory(
           items[$stateParams.itemId].short_name);
         return ShoppingListService.getItem(promise);
+      }],
+      id: ['$stateParams', 'ShoppingListService','items',
+      function ($stateParams, ShoppingListService, items) {
+        return (items[$stateParams.itemId].short_name);
       }]
     }
   });

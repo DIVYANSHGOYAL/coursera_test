@@ -5,11 +5,12 @@ angular.module('ShoppingList')
 .controller('ItemDetailController', ItemDetailController);
 
 // Version with resolving to 1 item based on $stateParams in route config
-ItemDetailController.$inject = ['item','items','$stateParams'];
-function ItemDetailController(item, $stateParams, items) {
+ItemDetailController.$inject = ['item','id'];
+function ItemDetailController(item, id) {
   // console.log(items[$stateParams.itemId].short_name);
   var itemDetail = this;
-  // itemDetail.shortName = items[$stateParams.itemId].short_name;
+  console.log(id);
+  itemDetail.number = id;
   itemDetail.item = item;
   console.log("itemDetail is ", itemDetail.item);
 
